@@ -16,8 +16,10 @@
       */
 
       const addClassToTitle = function () {
-      
+        var element = document.getElementById("title")
+        element.classList.add("myHeading")
       }
+      window.addEventListener("load",function() { addClassToTitle() })
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
