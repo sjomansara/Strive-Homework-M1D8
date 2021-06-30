@@ -71,15 +71,6 @@
       Write a function for making the first UL disappear.
       */
 
-      /*const firstUlDisappear = function () {
-        let ulDisappear = function () {
-        let list = document.getElementById("firstList")
-        firstList.innerHTML = " "
-      }
-      window.addEventListener("load", function() { firstUlDisappear(" ") })
-      }
-
-      */
       const firstUlDisappear = function () {
         document.getElementById("firstList").style.display = "none"
       }
@@ -90,8 +81,12 @@
       */
 
       const paintItGreen = function () {
-        //
-      };
+        let unorderedLists = document.getElementsByTagName("ul")
+        for (let i = 0; i < unorderedLists.length; i++) {
+          unorderedLists[i].style.backgroundColor = "green"
+        }
+      }
+      window.addEventListener("load",function() { paintItGreen("green") })
 
       /* EXERCISE 9
       Make the heading of the page change color every time the user clicks on it.
