@@ -46,7 +46,7 @@
        */
 
       const addToTheSecond = function (content) {
-        let list = document.getElementById("secondList");
+        let list = document.getElementById("secondList")
         const newItem = document.getElementById("secondList").value
         let entry = document.createElement("li")
         entry.appendChild(document.createTextNode(content))
@@ -59,8 +59,13 @@
       */
 
       const addParagraph = function (content) {
-        //
-      };
+        let newParagraph = document.getElementById("div")
+        const newP = document.getElementById("div").value
+        let entry = document.createElement("p")
+        entry.appendChild(document.createTextNode(content))
+        newParagraph.appendChild(entry)
+      }
+      window.addEventListener("load",function() { addParagraph("This is the second paragraph.") })
 
       /* EXERCISE 7
       Write a function for making the first UL disappear.
@@ -143,7 +148,7 @@
 
       <a id="link" href="strive.school">This link goes to Strive School</a>
 
-      <div>
+      <div id="div">
         <p id="p">This text is just for the exercise</p>
       </div>
 
