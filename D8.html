@@ -35,9 +35,11 @@
       Write a function for changing the destination of every link to https://www.google.com
       */
 
-      const changeUrls = function () {
-        //
-      };
+      const changeUrls = function (newLink) {
+        const element = document.getElementById("link")
+        element.href = newLink
+      }
+      window.addEventListener("load",function() { changeUrls(href="https://www.google.com") })
 
       /* EXERCISE 5
        Write a function for adding a new item in the second list.
@@ -134,7 +136,7 @@
         <li>3rd</li>
       </ul>
 
-      <a href="strive.school">This link goes to Strive School</a>
+      <a id="link" href="strive.school">This link goes to Strive School</a>
 
       <div>
         <p id="p">This text is just for the exercise</p>
