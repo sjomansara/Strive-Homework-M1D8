@@ -93,16 +93,23 @@
       */
 
       const makeItClickable = function () {
-        //
-      };
+        let color = document.getElementById("title").style.color
+        console.log(color)
+        if (color === "blue") {
+          document.getElementById("title").style.color = "red"
+        } else if (color === "" || color === "red") {
+          document.getElementById("title").style.color = "blue"
+        }
+      }
 
       /* EXERCISE 10
       Change the footer text with something else when the user clicks on it.
       */
 
       const changeFooterText = function () {
-        //
-      };
+        document.getElementById("footer")
+      footer.innerHTML = footer.innerHTML.replace("And this text is just for the exercise too!", "This is the new footer")
+        }
 
       /* EXERCISE 11
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
@@ -132,7 +139,7 @@
   </head>
   <body>
     <header>
-      <h1 id="title">This is the title of the page</h1>
+      <h1 id="title" onclick="makeItClickable()">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </header>
 
@@ -167,7 +174,7 @@
     </main>
 
     <footer>
-      <p>And this text is just for the exercise too!</p>
+      <p id="footer" onclick = "changeFooterText()">And this text is just for the exercise too!</p>
     </footer>
   </body>
 </html>
