@@ -71,9 +71,19 @@
       Write a function for making the first UL disappear.
       */
 
+      /*const firstUlDisappear = function () {
+        let ulDisappear = function () {
+        let list = document.getElementById("firstList")
+        firstList.innerHTML = " "
+      }
+      window.addEventListener("load", function() { firstUlDisappear(" ") })
+      }
+
+      */
       const firstUlDisappear = function () {
-        //
-      };
+        document.getElementById("firstList").style.display = "none"
+      }
+      window.addEventListener("load",function() { firstUlDisappear() })
 
       /* EXERCISE 8
       Write a function for making the background of every UL green.
