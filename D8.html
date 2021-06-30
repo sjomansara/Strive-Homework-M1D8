@@ -16,7 +16,7 @@
       */
 
       const addClassToTitle = function () {
-        var element = document.getElementById("title")
+        const element = document.getElementById("title")
         element.classList.add("myHeading")
       }
       window.addEventListener("load",function() { addClassToTitle() })
@@ -25,10 +25,12 @@
       Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
-        //
-      };
-
+      const changePcontent = function (newP) {
+        const element = document.getElementById("p")
+        element.innerHTML = newP
+      }
+      window.addEventListener("load",function() { changePcontent("Changed content") })
+      
       /* EXERCISE 4
       Write a function for changing the destination of every link to https://www.google.com
       */
@@ -135,7 +137,7 @@
       <a href="strive.school">This link goes to Strive School</a>
 
       <div>
-        <p>This text is just for the exercise</p>
+        <p id="p">This text is just for the exercise</p>
       </div>
 
       <div>
