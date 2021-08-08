@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script>
@@ -110,13 +111,7 @@
         document.getElementById("footer")
       footer.innerHTML = footer.innerHTML.replace("And this text is just for the exercise too!", "This is the new footer")
         }
-
-      /* EXERCISE 11
-      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
-      */
-
-      const inputField = document.getElementById("input-field");
-      // ...
+      
 
       /* EXERCISE 12
       Create a new welcome alert message when the page successfully loads.
@@ -177,4 +172,18 @@
       <p id="footer" onclick = "changeFooterText()">And this text is just for the exercise too!</p>
     </footer>
   </body>
+  <script>
+
+  /* EXERCISE 11
+      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+  
+  const inputField = document.getElementById("input-field")
+      // console.log(inputField)
+      document.onkeypress = function (e) {
+        console.log(inputField.value)
+      }
+      
+  </script>
 </html>
